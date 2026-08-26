@@ -1,5 +1,5 @@
 import { DataTypes, Sequelize } from "sequelize";
-import { conn } from "../config/database.js"
+import { conn } from "../config/database.js";
 
 export const Curso = conn.define("Curso", {
     id_curso: {
@@ -9,17 +9,16 @@ export const Curso = conn.define("Curso", {
     },
     nombre: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: false
     },
     descripcion: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: false
     },
     duracion: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: false
     }
-}, {
+},{
     timestamps: true
 })
-    

@@ -2,7 +2,7 @@ import { DataTypes } from "sequelize";
 import { conn } from "../config/database.js";
 
 export const Usuarios = conn.define("Usuarios", {
-    id: {
+    id_usuario: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         allowNull: false
