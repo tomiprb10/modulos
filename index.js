@@ -1,6 +1,8 @@
 import express from 'express'
 import { conn } from './src/config/database.js'
 import { Usuarios } from './src/models/ModelUsuario.js'
+import { Matricula } from './src/models/ModelMatricula.js'
+import { Curso } from './src/models/ModelCurso.js'
 
 const app = express()
 

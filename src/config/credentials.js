@@ -1,6 +1,6 @@
 const DB_NAME = "campus_tid"
 const DB_USER = "root"
-const DB_PASSWORD = "root"
+const DB_PASSWORD = ""
 const OBJ_SEQUELIZE = {
     port: 3306,
     dialect: "mysql",
