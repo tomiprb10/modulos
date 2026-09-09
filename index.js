@@ -1,10 +1,12 @@
 import express from 'express'
 import { conn } from './src/config/database.js'
-import { Usuarios } from './src/models/ModelUsuario.js'
-import { Matricula } from './src/models/ModelMatricula.js'
-import { Curso } from './src/models/ModelCurso.js'
+import { router_usuario } from './src/router/RouterUsuarios.js'
+import { router_curso } from './src/router/RouterCursos.js'
 
 const app = express()
+app.use(express.json())
+app.use(router_usuario)
+app.use(router_curso)
 
 const PORT = 3000
 const SERVER = "http://localhost:"
@@ -15,11 +17,10 @@ app.listen(PORT, () => {
 })
 
 conn.authenticate()
-    .then(()=> {
+    .then(() => {
         return conn.sync()
     })
     .then(() => console.log("Conexión establecida..."))
     .catch((error) => console.log(error))
 
 
-    
